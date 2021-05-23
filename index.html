@@ -23,29 +23,32 @@
         <div class="container">
           <a href="index.html" class="home">Техномарт</a>
           <form action="handler.php" method="get">
-            <label for="header-search">Поиск:</label>
-            <input type="search" name="header-search" id="header-search" />
+            <input
+              type="search"
+              name="header-search"
+              id="header-search"
+              placeholder="Поиск:"
+            />
+            <label for="header-search"></label>
           </form>
-          <ul class="header-user-menu">
-            <li class="user-menu-item">
-              <a href="#">Закладки:<span class="bookmarks-count">0</span></a>
-            </li>
-            <li class="user-menu-item">
-              <a href="#">Корзина:<span class="goods-count">0</span></a>
-            </li>
-            <li class="user-menu-item">
-              <a href="#">Оформить заказ</a>
-            </li>
-          </ul>
+          <a href="#" class="user-menu-item item-bookmarks"
+            >Закладки: <span class="bookmarks-count">0</span></a
+          >
+          <a href="#" class="user-menu-item item-goods"
+            >Корзина: <span class="goods-count">0</span></a
+          >
+          <a href="#" class="user-menu-order">Оформить заказ</a>
         </div>
       </nav>
       <div class="header-middle-block">
         <div class="container">
+          <div class="header-desc">
+            <em>
+              Интернет-магазин строительных материалов<br />
+              и инструментов для ремонта
+            </em>
+          </div>
           <section class="header-contacts-info">
-            <div class="contacts-desc">
-              Интернет-магазин строительных материалов и инструментов для
-              ремонта
-            </div>
             <div class="contacts-phone">+7 (812) 555-05-55</div>
             <div class="contacts-adress">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
@@ -53,10 +56,14 @@
           </section>
           <section class="user-panel">
             <div class="user-panel-buttons">
-              <button type="button" class="btn btn-login">Войти</button>
-              <button type="button" class="btn btn-register">
+              <a href="#" class="btn btn-login">Войти</a>
+              <a href="#" class="btn btn-register">
                 Регистрация
-              </button>
+              </a>
+            </div>
+          </section>
+          <section class="user-panel-in">
+              <a href="#" class="user-name">Равшан Джамшутович<span class="logout-btn"></span></a>
               <ul class="user-panel-menu">
                 <li class="panel-menu-item">
                   <a href="#" class="hidden">Мои заказы</a>
