@@ -10,7 +10,10 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a,
+li,
+figure {
   margin: 0;
   padding: 0;
   font-size: normal;
@@ -23,6 +26,11 @@ h6 {
 body {
   background-color: white;
   font-family: "PT Sans", "Arial", sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 .main-header {
@@ -606,11 +614,11 @@ body {
   background-color: #ee3643;
 }
 
-.catalog-slider .btn-link:hover {
+.btn-link:hover {
   background-color: #ca2c37;
 }
 
-.catalog-slider .btn-link:active {
+.btn-link:active {
   background-color: #ba2732;
 }
 
@@ -666,11 +674,13 @@ body {
   display: none;
 }
 
-.goods {
+.goods,
+.brands {
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.goods .goods-header {
+.goods .goods-header,
+.brands .brands-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -679,14 +689,16 @@ body {
   font-family: "Cuprum", "Arial", sans-serif;
 }
 
-.goods-header .goods-title {
+.goods-header .goods-title,
+.brands-header .brands-title {
   padding: 5px 5px 10px;
   font-size: 30px;
   text-transform: uppercase;
   color: #32425c;
 }
 
-.goods-header .goods-more-link {
+.goods-header .goods-more-link,
+.brands-header .brands-more-link {
   padding: 14px 55px;
   margin-top: auto;
   margin-bottom: auto;
@@ -725,8 +737,8 @@ body {
 }
 
 .goods-card .goods-picture {
-  max-height: 171px;
-  width: auto;
+  max-width: 218px;
+  height: auto;
 }
 
 .goods-card .goods-title {
@@ -847,4 +859,247 @@ body {
 
 .goods-hover-buttons .goods-hover-button:nth-child(2):active {
   opacity: 0.3;
+}
+
+.brands .brands-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 85px;
+}
+
+.brands-cards .brands-card {
+  border: 1px solid #eaeaea;
+  height: 145px;
+}
+
+.brands-cards .brands-card:hover {
+  box-shadow: 0 8px 15px rgba(41, 52, 73, 0.5);
+}
+
+.brands-cards .brands-card:active {
+  opacity: 0.3;
+  box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+}
+
+.brands-card a {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.brands-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.services {
+  position: relative;
+  background: url("img/header-bcg-grad.png") repeat;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  padding-top: 65px;
+  padding-bottom: 100px;
+}
+
+.services .services-overlay {
+  background: url("img/delivery-bcg.png") no-repeat right bottom -100px;
+  /* background: url("img/garanty-bcg.png") no-repeat right bottom -100px;
+  background: url("img/credit-bcg.png") no-repeat right bottom -100px; */
+}
+
+.services h2 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+.services .services-header {
+  margin-bottom: 75px;
+}
+
+.services-header .services-header-title {
+  margin-bottom: 30px;
+}
+
+.services-header .services-header-title,
+.services-header .services-header-slogan {
+  max-width: 400px;
+}
+
+.services .services-tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 20px;
+  background-color: transparent;
+}
+
+.services-tabs .services-tabs-control {
+  position: relative;
+  list-style: none;
+  grid-column: 1 / 4;
+  display: flex;
+
+  flex-direction: column;
+}
+
+.services-tabs-control::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 10px;
+  height: 279px;
+  background: url("img/services-tab-control-overlay.png") no-repeat;
+}
+
+.tabs-control-item a {
+  display: block;
+  font-family: "Cuprum" "Arial", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #32425c;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 23px;
+  border-bottom: 1px solid #2b364a;
+  border-top: 1px solid #405069;
+}
+
+.tabs-control-item a:hover {
+  background-color: #293449;
+}
+
+.tabs-control-item .active-services-control {
+  color: #32425c;
+  background-color: #ffffff;
+  border-bottom: none;
+  border-top: none;
+}
+
+.tabs-control-item .active-services-control:hover {
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+.services-tabs .services-tab {
+  background-color: transparent;
+  grid-column: 5 / 13;
+}
+
+.services-tab .services-title {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.services-tab .services-info {
+  max-width: 380px;
+  line-height: 24px;
+}
+
+.services-tab-delivery {
+}
+
+.services-tab-garanty {
+  display: none;
+}
+
+.services-tab-credit {
+  display: none;
+}
+
+.about {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  padding-top: 80px;
+  padding-bottom: 85px;
+}
+
+.about .container {
+  display: grid;
+  grid-template-columns: 12, 1fr;
+  column-gap: 20px;
+}
+
+.about .about-promo {
+  grid-column: 1 / 8;
+  display: flex;
+  flex-direction: column;
+}
+
+.about .about-contacts {
+  grid-column: 9 / 13;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-promo .promo-title,
+.about-contacts .contacts-title {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.about-promo .promo-text,
+.about-contacts .contacts-text {
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.about-promo .promo-text:last-of-type {
+  margin-bottom: 10px;
+}
+
+.about-promo .promo-list {
+  margin-bottom: 30px;
+}
+
+.about-promo .promo-list a {
+  display: block;
+  text-decoration: none;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  color: #000000;
+  padding-left: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.promo-list .promo-list-item {
+  position: relative;
+}
+
+.promo-list .promo-list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  top: 50%;
+  background-color: #ee3643;
+}
+
+.about .btn-link {
+  align-self: start;
+}
+
+.about-contacts .btn-link {
+  width: 300px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.about .contacts-map {
+  width: 300px;
+  height: 158px;
+  margin-bottom: auto;
+}
+
+.about .contacts-map img {
+  max-width: 300px;
+  height: auto;
 }
