@@ -711,7 +711,7 @@ ol {
   margin-bottom: 20px;
 }
 
-.goods-cards .goods-card {
+.goods-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -720,7 +720,7 @@ ol {
   padding-bottom: 20px;
 }
 
-.goods-cards .goods-card:hover {
+.goods-card:hover {
   box-shadow: 0 8px 15px rgba(41, 52, 73, 0.5);
 }
 
@@ -732,7 +732,7 @@ ol {
   visibility: visible;
 }
 
-.goods-cards .goods-card-new {
+.goods-card-new {
   position: relative;
 }
 
@@ -1266,4 +1266,63 @@ ol {
   text-decoration: none;
 }
 
+/* catalog.html */
+
+.catalog-page {
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-size: 13px;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.breadcrumbs-list .breadcrumbs-list-item {
+  padding-left: 40px;
+  position: relative;
+}
+
+.breadcrumbs-list .breadcrumbs-list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 12px;
+  background: url("img/icon-right-small.png") no-repeat;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.breadcrumbs-list .breadcrumbs-list-item:first-of-type::before {
+  width: 14px;
+  height: 12px;
+  left: 20px;
+  background: url("img/icon-home.png") no-repeat;
+}
+
+.breadcrumbs-list a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.breadcrumbs-list a:hover {
+  text-decoration: underline;
+}
+
+.catalog-title {
+  font-family: 'Cuprum', 'Arial', sans-serif;
+  font-size: 30px;
+  color: #32425c;
+  text-transform: uppercase;
+  background-color: #f2f6f8;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
 
