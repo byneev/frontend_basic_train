@@ -110,13 +110,13 @@
               <div class="price-range-wrapper">
                 <input
                   type="range"
-                  class="price-range"
+                  class="price-range price-range-min"
                   id="price-range-min"
                   max="20000"
                 />
                 <input
                   type="range"
-                  class="price-range"
+                  class="price-range price-range-max"
                   id="price-range-max"
                   min="20001"
                   max="40000"
@@ -128,14 +128,12 @@
                   class="price-input-min"
                   min="0"
                   max="20000"
-                  step="100"
                 />
                 <input
                   type="number"
                   class="price-input-max"
                   min="20001"
                   max="40000"
-                  step="100"
                 />
               </div>
             </fieldset>
@@ -262,7 +260,8 @@
                     <s class="good-price-old">22500 Р.</s>
                     <a href="#" class="good-price-new">15500 Р.</a>
                     <div class="goods-hover-buttons">
-                      <a href="#" class="goods-hover-button">Купить</a
+                      <a href="#" class="goods-hover-button goods-button-buy"
+                        >Купить</a
                       ><a href="#" class="goods-hover-button">В закладки</a>
                     </div>
                   </article>
@@ -281,7 +280,8 @@
                     <s class="good-price-old">30500 Р.</s>
                     <a href="#" class="good-price-new">25500 Р.</a>
                     <div class="goods-hover-buttons">
-                      <a href="#" class="goods-hover-button">Купить</a
+                      <a href="#" class="goods-hover-button goods-button-buy"
+                        >Купить</a
                       ><a href="#" class="goods-hover-button">В закладки</a>
                     </div>
                   </article>
@@ -300,7 +300,8 @@
                     <s class="good-price-old"></s>
                     <a href="#" class="good-price-new">12500 Р.</a>
                     <div class="goods-hover-buttons">
-                      <a href="#" class="goods-hover-button">Купить</a
+                      <a href="#" class="goods-hover-button goods-button-buy"
+                        >Купить</a
                       ><a href="#" class="goods-hover-button">В закладки</a>
                     </div>
                     <div class="menu-item-new"></div>
@@ -320,7 +321,8 @@
                     <s class="good-price-old">22500 Р.</s>
                     <a href="#" class="good-price-new">15500 Р.</a>
                     <div class="goods-hover-buttons">
-                      <a href="#" class="goods-hover-button">Купить</a
+                      <a href="#" class="goods-hover-button goods-button-buy"
+                        >Купить</a
                       ><a href="#" class="goods-hover-button">В закладки</a>
                     </div>
                   </article>
@@ -339,7 +341,8 @@
                     <s class="good-price-old">30500 Р.</s>
                     <a href="#" class="good-price-new">25500 Р.</a>
                     <div class="goods-hover-buttons">
-                      <a href="#" class="goods-hover-button">Купить</a
+                      <a href="#" class="goods-hover-button goods-button-buy"
+                        >Купить</a
                       ><a href="#" class="goods-hover-button">В закладки</a>
                     </div>
                     <div class="menu-item-new"></div>
@@ -359,7 +362,8 @@
                     <s class="good-price-old"></s>
                     <a href="#" class="good-price-new">12500 Р.</a>
                     <div class="goods-hover-buttons">
-                      <a href="#" class="goods-hover-button">Купить</a
+                      <a href="#" class="goods-hover-button goods-button-buy"
+                        >Купить</a
                       ><a href="#" class="goods-hover-button">В закладки</a>
                     </div>
                   </article>
@@ -378,7 +382,8 @@
                     <s class="good-price-old">22500 Р.</s>
                     <a href="#" class="good-price-new">15500 Р.</a>
                     <div class="goods-hover-buttons">
-                      <a href="#" class="goods-hover-button">Купить</a
+                      <a href="#" class="goods-hover-button goods-button-buy"
+                        >Купить</a
                       ><a href="#" class="goods-hover-button">В закладки</a>
                     </div>
                     <div class="menu-item-new"></div>
@@ -398,7 +403,8 @@
                     <s class="good-price-old">30500 Р.</s>
                     <a href="#" class="good-price-new">25500 Р.</a>
                     <div class="goods-hover-buttons">
-                      <a href="#" class="goods-hover-button">Купить</a
+                      <a href="#" class="goods-hover-button goods-button-buy"
+                        >Купить</a
                       ><a href="#" class="goods-hover-button">В закладки</a>
                     </div>
                   </article>
@@ -417,7 +423,8 @@
                     <s class="good-price-old"></s>
                     <a href="#" class="good-price-new">12500 Р.</a>
                     <div class="goods-hover-buttons">
-                      <a href="#" class="goods-hover-button">Купить</a
+                      <a href="#" class="goods-hover-button goods-button-buy"
+                        >Купить</a
                       ><a href="#" class="goods-hover-button">В закладки</a>
                     </div>
                   </article>
@@ -508,15 +515,21 @@
         </div>
       </section>
     </footer>
-    <section class="modal-cart">
+    <section class="modal-cart hidden">
       <div class="modal-text-wrap">
         <div class="modal-text-dec"></div>
         <p class="modal-text">Товар добавлен в корзину!</p>
       </div>
       <div class="modal-buttons">
-        <button class="btn-link">Оформить заказ</button>
-        <button class="btn-link btn-link-continue">Продолжить покупки</button>
+        <a href="index.html" class="btn-link btn-link-order" type="submit"
+          >Оформить заказ</a
+        >
+        <button class="btn-link btn-link-continue" type="button">
+          Продолжить покупки
+        </button>
       </div>
+      <button class="modal-cart-close" type="button"></button>
     </section>
+    <script src="catalog.js" defer></script>
   </body>
 </html>
